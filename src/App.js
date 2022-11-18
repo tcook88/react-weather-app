@@ -8,31 +8,31 @@ function App() {
   let days = [
     {
       name: "Sun",
-      icon: "sunny",
+      icon: "rainy",
       hi: 99,
       lo: 0
     },
     {
       name: "Mon",
-      icon: "sunny",
+      icon: "snowy",
       hi: 99,
       lo: 0
     },
     {
       name: "Tue",
-      icon: "sunny",
+      icon: "sun",
       hi: 99,
       lo: 0
     },
     {
       name: "Wed",
-      icon: "sunny",
+      icon: "storm",
       hi: 99,
       lo: 0
     },
     {
       name: "Thu",
-      icon: "sunny",
+      icon: "cloud (1)",
       hi: 99,
       lo: 0
     }

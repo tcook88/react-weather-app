@@ -65,8 +65,9 @@
     column-gap: 32px;
 }
 
-.Weather img { 
+.Weather .weather-icon { 
     width: 128px;
+    height: 128px;
 }
 
 .Weather .current-temp { 

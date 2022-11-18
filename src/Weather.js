@@ -20,7 +20,7 @@ export default function Weather(){
                 </div>
             </div>
             <div className="current-weather-grid">
-                <div classname="weather-icon col"><img src="/img/rainy.png" alt="rainy"/></div>
+                <div classname="col"><img src="/img/rainy.png" alt="rainy" className="weather-icon"/></div>
                 <div className="temp-wrapper col">
                     <div className="current-temp">14°</div>
                     <div className="hi-lo">Hi: 59° Lo: -3°</div>
