@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Search from './Search';
 import Forecast from './Forecast';
@@ -49,7 +48,7 @@ function App() {
     <Weather />
     
     <Forecast days={days}/>
-    <div class="footer"><a href="https://github.com/tcook88/react-weather-app" target="_blank"
+    <div class="footer"><a href="https://github.com/tcook88/react-weather-app" target="_blank" rel="noreferrer"
                 class="github-link">Open-source
                 code</a><span>, by Tara Cook </span>
             <div><a href="https://www.flaticon.com/free-icons/weather" target="_blank" rel="noreferrer" title="weather icons">Weather
