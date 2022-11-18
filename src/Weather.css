@@ -1,0 +1,110 @@
+.Weather { 
+    max-width: 672px;
+    border-radius: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    margin-top: 24px;
+    padding: 32px;
+}
+
+.Weather .location-wrapper { 
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.Weather .info-wrapper { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.Weather .location-icon { 
+    height: 24px;
+    width: 24px;
+}
+
+.Weather .city { 
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.Weather .updated { 
+    font-size: 12px;
+    line-height: 18px;
+    color: #71717A;
+}
+
+.Weather .toggle {
+    background-color: #F4F4F5;
+    border-radius: 99px;
+    display: flex;
+    height: 40px;
+    width: 80px;
+}
+
+.f, .c { 
+    display: inline-flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 99px;
+    padding: 8px 12px;
+}
+
+.active { 
+    background-color: white;
+    border: 1px solid #D4D4D8;
+}
+
+.Weather .current-weather-grid { 
+   display: flex;
+   justify-content: center;
+    margin-top: 32px;
+    column-gap: 32px;
+}
+
+.Weather img { 
+    width: 128px;
+}
+
+.Weather .current-temp { 
+    font-size: 96px;
+    line-height: 96px;
+    font-weight: 300;
+}
+
+.Weather .hi-lo { 
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.Weather .other-wrapper {
+     display: flex;
+     column-gap: 32px;
+     margin-top: 24px;
+     justify-content: center;
+}
+
+.Weather .other-data { 
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.Weather .other-icon { 
+    color: #D4D4D8;
+    height: 24px;
+    width: 24px;
+}
+
+.Weather .wind { 
+    color: #93C5FD;
+}
+
+.Weather .current-other { 
+    font-size: 16px;
+    line-height: 24px;
+}
