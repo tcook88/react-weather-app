@@ -45,7 +45,7 @@ function App() {
     <div className="App">
       <h1>Weather App</h1>
     <Search onSubmit={handleSearch} />
-    <Weather />
+    <Weather defaultCity="New York"/>
     
     <Forecast days={days}/>
     <div class="footer"><a href="https://github.com/tcook88/react-weather-app" target="_blank" rel="noreferrer"
