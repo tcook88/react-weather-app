@@ -47,7 +47,7 @@ function App() {
     <Search onSubmit={handleSearch} />
     <Weather defaultCity="New York"/>
     
-    <Forecast days={days}/>
+    {/* <Forecast days={days}/>  */}
     <div class="footer"><a href="https://github.com/tcook88/react-weather-app" target="_blank" rel="noreferrer"
                 class="github-link">Open-source
                 code</a><span>, by Tara Cook </span>
