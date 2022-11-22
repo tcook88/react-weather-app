@@ -29,13 +29,5 @@
 .Search .submit-button { 
     border: none;
     padding: 8px 12px;
-    border-bottom-left-radius: 12px;
-    border-top-left-radius: 12px;
-}
-
-.Search .location-button { 
-    border: none;
-    padding: 8px 12px;
-    border-bottom-right-radius: 12px;
-    border-top-right-radius: 12px;
+    border-radius: 99px;
 }

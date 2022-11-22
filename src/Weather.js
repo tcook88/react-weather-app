@@ -5,8 +5,27 @@ import axios from "axios";
 export default function Weather(props){ 
     const [ready, setReady] = useState(false);
     const [weatherData, setWeatherData] = useState({});
+    const codeMapping = {
+         "01d" : "/img/sun.png",
+        "01n" : "/img/night.png",
+        "02d" : "/img/cloudy.png",
+        "02n" : "/img/night-1.png",
+        "03d" : "/img/cloud.png",
+       "03n" :"/img/cloud.png",
+        "04d" : "/img/cloud.png",
+       "04n" :"/img/cloud.png",
+        "50d" : "/img/windy.png",
+        "13d" : "/img/snowy.png",
+       "13n" : "/img/snowy.png",
+        "09d" : "/img/rainy.png",
+        "10d" : "/img/rainy.png",
+        "11d" : "/img/storm.png",
+       "10n" : "/img/rainy.png",
+       "09n" : "/img/rainy.png"
+    };
     function showTemp(response) { 
         console.log(response.data);
+        
         setWeatherData({
             temperature: response.data.main.temp,
             city: response.data.name,
@@ -15,7 +34,7 @@ export default function Weather(props){
             description: response.data.weather[0].description,
             hi: response.data.main.temp_max,
             lo: response.data.main.temp_min,
-            iconUrl: "/img/rainy.png"
+            iconUrl: codeMapping[response.data.weather[0].icon],
         })
         setReady(true);
     }
@@ -64,7 +83,7 @@ export default function Weather(props){
     axios.get(apiUrl).then(showTemp);
 
     return (
-    <div className="load">"Loading..."</div>
+    <div className="load">Loading...</div>
     )
     }
     
