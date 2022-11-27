@@ -31,22 +31,18 @@ function App() {
     },
     {
       name: "Thu",
-      icon: "cloud (1)",
+      icon: "cloud",
       hi: 99,
       lo: 0
     }
   ];
 
-  function handleSearch() {
-    console.log('this runs when our search gets submitted');
-  }
+  
 
   return (
     <div className="App">
       <h1>Weather App</h1>
-    <Search onSubmit={handleSearch} />
-    <Weather defaultCity="New York"/>
-    
+    <Search defaultCity="New York" />
     {/* <Forecast days={days}/>  */}
     <div class="footer"><a href="https://github.com/tcook88/react-weather-app" target="_blank" rel="noreferrer"
                 class="github-link">Open-source
