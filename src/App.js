@@ -1,41 +1,39 @@
 import './App.css';
 import Search from './Search';
-import Forecast from './Forecast';
-import Weather from './Weather';
 
 function App() {
-  let days = [
-    {
-      name: "Sun",
-      icon: "rainy",
-      hi: 99,
-      lo: 0
-    },
-    {
-      name: "Mon",
-      icon: "snowy",
-      hi: 99,
-      lo: 0
-    },
-    {
-      name: "Tue",
-      icon: "sun",
-      hi: 99,
-      lo: 0
-    },
-    {
-      name: "Wed",
-      icon: "storm",
-      hi: 99,
-      lo: 0
-    },
-    {
-      name: "Thu",
-      icon: "cloud",
-      hi: 99,
-      lo: 0
-    }
-  ];
+  // let days = [
+  //   {
+  //     name: "Sun",
+  //     icon: "rainy",
+  //     hi: 99,
+  //     lo: 0
+  //   },
+  //   {
+  //     name: "Mon",
+  //     icon: "snowy",
+  //     hi: 99,
+  //     lo: 0
+  //   },
+  //   {
+  //     name: "Tue",
+  //     icon: "sun",
+  //     hi: 99,
+  //     lo: 0
+  //   },
+  //   {
+  //     name: "Wed",
+  //     icon: "storm",
+  //     hi: 99,
+  //     lo: 0
+  //   },
+  //   {
+  //     name: "Thu",
+  //     icon: "cloud",
+  //     hi: 99,
+  //     lo: 0
+  //   }
+  // ];
 
   
 

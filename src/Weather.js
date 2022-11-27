@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './Weather.css';
-import axios from "axios";
 import classNames from "classnames";
 
 export default function Weather(props){ 
@@ -27,10 +26,9 @@ export default function Weather(props){
         hours = `0${hours}`;
     }
     const [unit, setUnit ] = useState("fahrenheit");
-    let celsius = (props.data.temperature - 32) * 5/9; 
 
     function getTemperature(temp) {
-        if (unit == 'fahrenheit') {
+        if (unit === 'fahrenheit') {
             return Math.round(temp);
         } else {
             return Math.round((temp - 32) * 5/9);
@@ -58,10 +56,10 @@ export default function Weather(props){
                     <div className="toggle-wrapper">
                         <div className="toggle">
                         <div className={classNames("f", {
-                            "active": unit == 'fahrenheit'
+                            "active": unit === 'fahrenheit'
                         })} onClick={showFahrenheit}>°F</div>
                         <div className={classNames("c", {
-                            "active": unit == 'celsius'
+                            "active": unit === 'celsius'
                         })} onClick={showCelsius}>°C</div>
                         </div>
                     </div>
