@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './Weather.css';
 
 
@@ -44,8 +44,6 @@ export default function Weather(props){
                     <div classname="col"><img src={props.data.iconUrl} alt={props.data.description} className="weather-icon"/></div>
                     <div className="temp-wrapper col">
                         <div className="current-temp">{Math.round(props.data.temperature)}°</div>
-            
-
                     </div>
                 </div>
                 <div className="other-wrapper">

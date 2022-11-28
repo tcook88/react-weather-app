@@ -85,7 +85,6 @@ export default function Search(props) {
       <Weather data={weatherData} />
       <Forecast data={weatherData} />
       </div>
-      
     ); 
     } else {
       search();
