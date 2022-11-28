@@ -67,9 +67,7 @@ useEffect(() => {
                     return null;
                 }
                 
-            })}
-                    
-            
+            })}         
         </div>
     );
     
