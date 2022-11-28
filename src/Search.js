@@ -2,6 +2,7 @@ import React,{ useState }  from "react";
 import './Search.css';
 import axios from "axios";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 
 
 
@@ -29,7 +30,7 @@ export default function Search(props) {
 
   
   function showTemp(response) { 
- 
+    
     setWeatherData({
         temperature: response.data.main.temp,
         city: response.data.name,
@@ -40,7 +41,9 @@ export default function Search(props) {
         lo: response.data.main.temp_min,
         iconUrl: codeMapping[response.data.weather[0].icon],
         date: new Date(response.data.dt * 1000),
-        ready: true
+        ready: true,
+        lat: response.data.coord.lat,
+        lon: response.data.coord.lon
     })
 }
 
@@ -49,11 +52,13 @@ export default function Search(props) {
     let apiKey = "281450ec88936f4fa8ee9864682b49a0";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(showTemp);
+
   }
     
-  function handleSubmit(event) {
-      event.preventDefault();
+  function handleSubmit(event) {  
+    event.preventDefault();
       search();
+     
     }
 
     function changeCity(event) {
@@ -78,6 +83,7 @@ export default function Search(props) {
         </div>
       </form>
       <Weather data={weatherData} />
+      <Forecast data={weatherData} />
       </div>
       
     ); 
