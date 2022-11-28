@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Weather.css';
-import classNames from "classnames";
+
 
 export default function Weather(props){ 
 
@@ -25,23 +25,7 @@ export default function Weather(props){
     if (hours < 10) {
         hours = `0${hours}`;
     }
-    const [unit, setUnit ] = useState("fahrenheit");
-
-    function getTemperature(temp) {
-        if (unit === 'fahrenheit') {
-            return Math.round(temp);
-        } else {
-            return Math.round((temp - 32) * 5/9);
-        }
-    }
-
-    function showCelsius(event){
-        setUnit("celsius");
-    }
-
-    function showFahrenheit(event){
-        setUnit("fahrenheit");
-    }
+   
     
         return(
             <div className="Weather">
@@ -53,22 +37,14 @@ export default function Weather(props){
                     </div>
                     <div className="updated">Last updated: {day} {hours}:{minutes}</div>
                     </div>
-                    <div className="toggle-wrapper">
-                        <div className="toggle">
-                        <div className={classNames("f", {
-                            "active": unit === 'fahrenheit'
-                        })} onClick={showFahrenheit}>°F</div>
-                        <div className={classNames("c", {
-                            "active": unit === 'celsius'
-                        })} onClick={showCelsius}>°C</div>
-                        </div>
+                    <div className="f-wrapper">F</div>
                     </div>
-                </div>
+        
                 <div className="current-weather-grid">
                     <div classname="col"><img src={props.data.iconUrl} alt={props.data.description} className="weather-icon"/></div>
                     <div className="temp-wrapper col">
-                        <div className="current-temp">{getTemperature(props.data.temperature)}°</div>
-                       {/* <div className="hi-lo">Hi: {getTemperature(props.data.hi)}° Lo: {getTemperature(props.data.lo)}°</div> */}
+                        <div className="current-temp">{Math.round(props.data.temperature)}°</div>
+            
 
                     </div>
                 </div>
@@ -83,6 +59,7 @@ export default function Weather(props){
                     </div>
                 </div>
             </div>
+            
         );
     } 
 
