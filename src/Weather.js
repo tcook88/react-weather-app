@@ -68,7 +68,8 @@ export default function Weather(props){
                     <div classname="col"><img src={props.data.iconUrl} alt={props.data.description} className="weather-icon"/></div>
                     <div className="temp-wrapper col">
                         <div className="current-temp">{getTemperature(props.data.temperature)}°</div>
-                        <div className="hi-lo">Hi: {getTemperature(props.data.hi)}° Lo: {getTemperature(props.data.lo)}°</div>
+                       {/* <div className="hi-lo">Hi: {getTemperature(props.data.hi)}° Lo: {getTemperature(props.data.lo)}°</div> */}
+
                     </div>
                 </div>
                 <div className="other-wrapper">
